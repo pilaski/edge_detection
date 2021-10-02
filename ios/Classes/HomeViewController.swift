@@ -11,6 +11,11 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             scannerVC.imageScannerDelegate = self
             scannerVC.modalPresentationStyle = .fullScreen
             scannerVC.modalTransitionStyle = .crossDissolve
+            if #available(iOS 13.0, *) {
+                scannerVC.navigationBar.tintColor = .label
+            } else {
+                scannerVC.navigationBar.tintColor = .black
+            }
             present(scannerVC, animated: true, completion: nil)
         }
     }
