@@ -16,6 +16,16 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
             } else {
                 scannerVC.navigationBar.tintColor = .black
             }
+
+            if #available(iOS 15, *) {
+                let appearance = UINavigationBarAppearance()
+                let navigationBar = UINavigationBar()
+                appearance.configureWithOpaqueBackground()
+                appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+                appearance.backgroundColor = UIColor(red: 72/255.0, green: 72/255.0, blue: 74/255.0, alpha: 1.0)
+                navigationBar.standardAppearance = appearance;
+                UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            }
             present(scannerVC, animated: true, completion: nil)
         }
     }
