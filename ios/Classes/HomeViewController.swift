@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, ImageScannerControllerDelegate {
                 appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
                 //appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: .systemForeground]
                 //appearance.backgroundColor = UIColor(red: 72/255.0, green: 72/255.0, blue: 74/255.0, alpha: 1.0)
-                appearance.backgroundColor = .systemGrey // .systemBackground
+                appearance.backgroundColor = .systemGray // .systemBackground
                 navigationBar.standardAppearance = appearance;
                 UINavigationBar.appearance().scrollEdgeAppearance = appearance
 
